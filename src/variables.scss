@@ -1,0 +1,44 @@
+// Viewports
+
+$tablet-width: 660px;
+$desktop-width: 1200px;
+$mobile-width-only: 659px;
+$mobile-width: 320px;
+
+//mobile mixin
+@mixin not-desktop {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin not-desktop {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (min-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (min-width: $mobile-width) {
+        @content;
+    }
+}
+
+// retina mixin
+@mixin retina {
+    @media screen and (min-resolution: 2dppx) {
+        @content;
+    }
+}
